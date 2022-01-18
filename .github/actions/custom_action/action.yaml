@@ -1,0 +1,16 @@
+name: 'ACITONE MOJ'
+description: 'ACITONE MOJ'
+inputs:
+  paths:
+    required: true
+    default:
+      - nesto_1
+      - nesto_2
+      - nesto_3
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: |
+          declare -a paths_array=${{ inputs.paths }}
+          echo ${paths_array}
